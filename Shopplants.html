@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+        Author: Kaylee Gelz
+        DGL13 Project
+        April 5 2021
+    -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="plants, subscriptions, vancouver" />
+    <title>GreenThumbery</title>
+    <link href="gt.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <img src="gt.png" alt="gt logo" />
+
+      <nav class="horizontal" id="mainLinks">
+        <ul>
+          <li><a href="greenthumbery.html">Home</a></li>
+          <li><a href="Shopplants.html">Shop Plants</a></li>
+          <li><a href="subscriptions.html">Subscriptions</a></li>
+          <li><a href="addons.html">Add-Ons</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h5>We have so many beautiful plants to choose from!</h5>
+      <script>
+        var i = 0;
+        var images = [];
+        var time = 3000;///set for 3 seconds
+
+        ///image list
+        images[0] = "1.png";
+        images[1] = "2.png";
+        images[2] = "3.png";
+
+        //change image
+        function changeImg() {
+          document.slide.src = images[i];
+
+          if (i < images.length - 1) {
+            i++;
+          } else {
+            i = 0;
+          }
+          setTimeout("changeImg()", time);
+        }
+        /// set onload
+        window.onload = changeImg;
+      </script>
+      <img name="slide" width="600" height="600" />
+    </main>
+
+    <footer>
+      555-7768 &nbsp greenthumbery@plants.com &nbsp; Plantsville, B.C.
+    </footer>
+    <script src="Plants.js"></script>
+  </body>
+</html>
